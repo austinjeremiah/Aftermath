@@ -1,0 +1,17 @@
+{
+  "name": "lifelink-activity-monitor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test1": "node tests/test-1.js",
+    "test2": "node tests/test-2.js",
+    "test3": "node tests/test-3.js",
+    "test4": "node tests/test-4.js",
+    "test5": "node tests/test-5.js"
+  },
+  "dependencies": {
+    "@pushchain/core": "^2.0.16",
+    "dotenv": "^17.2.3",
+    "ethers": "^6.15.0"
+  }
+}
