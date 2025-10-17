@@ -63,11 +63,11 @@ async def webhook_receiver(request: Request):
         with open(TRANSACTIONS_FILE, 'w') as f:
             json.dump(existing_transactions, f, indent=2)
         
-        print(f"✅ Stored {len(transactions)} transactions")
+        print(f" Stored {len(transactions)} transactions")
         return {"status": "ok", "transactions_stored": len(transactions)}
     
     except Exception as e:
-        print(f"❌ Error processing webhook: {str(e)}")
+        print(f" Error processing webhook: {str(e)}")
         return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":

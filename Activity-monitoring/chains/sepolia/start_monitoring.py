@@ -15,21 +15,20 @@ def run_webhook_server():
 
 def run_agent():
     """Run the monitoring agent"""
-    print("🤖 Starting monitoring agent...")
-    time.sleep(2)  # Wait a bit for webhook server to start
+    print(" Starting monitoring agent...")
+    time.sleep(2)
     subprocess.run([sys.executable, "agent.py"])
 
 if __name__ == "__main__":
-    print("🚀 Starting LifeLink Wallet Activity Monitor...")
-    print(f"📂 Working directory: {os.getcwd()}")
+    print(" Starting LifeLink Wallet Activity Monitor...")
+    print(f" Working directory: {os.getcwd()}")
     
     # Start webhook server in background thread
     webhook_thread = Thread(target=run_webhook_server, daemon=True)
     webhook_thread.start()
-    
-    # Start agent in main thread
+
     try:
         run_agent()
     except KeyboardInterrupt:
-        print("\n⏹️  Shutting down monitoring system...")
+        print("\n⏹  Shutting down monitoring system...")
         sys.exit(0)
