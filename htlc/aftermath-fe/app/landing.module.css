@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.8s ease-in;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0 0 1rem 0;
+  letter-spacing: 4px;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(139, 0, 0, 0.6),
+    3px 3px 0px rgba(0, 0, 0, 0.8),
+    6px 6px 0px rgba(255, 0, 0, 0.4);
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-style: italic;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 0, 0, 0.8),
+      0 0 20px rgba(139, 0, 0, 0.6),
+      3px 3px 0px rgba(0, 0, 0, 0.8),
+      6px 6px 0px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 10px rgba(255, 0, 0, 0.4),
+      0 0 20px rgba(139, 0, 0, 0.3),
+      3px 3px 0px rgba(0, 0, 0, 0.8),
+      6px 6px 0px rgba(255, 0, 0, 0.2);
+  }
+}
+
+.icon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid white;
+  border-radius: 12px;
+  background: #000000;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  background: #1a1a1a;
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

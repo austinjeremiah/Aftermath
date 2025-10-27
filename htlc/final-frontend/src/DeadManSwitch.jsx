@@ -8,8 +8,8 @@ import {
   usePushChain,
   PushUI,
 } from '@pushchain/ui-kit';
-import { DEADMAN_SWITCH_ABI, CONTRACT_ADDRESS } from './deadManSwitchABI';
-import { getLastWalletActivity, formatDuration } from './walletActivity';
+import { DEADMAN_SWITCH_ABI, CONTRACT_ADDRESS } from '../../aftermath-fe/components/deadManSwitchABI';
+import { getLastWalletActivity, formatDuration } from '../../aftermath-fe/app/walletActivity';
 import './DeadManSwitch.css';
 
 function DeadManSwitchApp() {
